@@ -87,5 +87,5 @@ st.title("This is for My Forever Baby, Shaa<3\nSmile karo pehle, Koi baat nahi F
 st.write("Now click the button below thinking about all your Powers!!!")
 if st.button("Works For Greek Gods Only"):
    st.image("https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif", use_container_width=True)
-   st.markdown("<h2>Mera Shaa, Tu jaldi theek hogaaaa! :) </h2>", unsafe_allow_html=True)
+   st.markdown("<h2>Not letting go of machi until you feel better :)</h2>", unsafe_allow_html=True)
 st.markdown('</div>', unsafe_allow_html=True)
