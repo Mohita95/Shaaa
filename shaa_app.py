@@ -5,6 +5,7 @@ st.set_page_config(
    page_icon="??",
    layout="centered"
 )
+# CSS and hearts
 st.markdown("""
 <style>
 body, .stApp {
@@ -67,6 +68,7 @@ footer {visibility: hidden;}
    100% { transform: translateY(-200vh) rotate(-45deg); opacity:0; }
 }
 </style>
+<!-- Floating hearts -->
 <div class="heart" style="left:5%; animation-delay:0s;"></div>
 <div class="heart" style="left:15%; animation-delay:2s;"></div>
 <div class="heart" style="left:30%; animation-delay:4s;"></div>
@@ -82,16 +84,17 @@ st.write("Now click the button below thinking about all your Powers!!!")
 if st.button("Works For Greek Gods Only"):
    st.image("https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif", use_container_width=True)
    st.markdown("<h2>Not letting go of machi until you feel better :)</h2>", unsafe_allow_html=True)
-   # First popup (6 sec delay)
+   # Chained popups
    components.html("""
 <script>
+   // First popup after 6 seconds
    setTimeout(function() {
        alert("Mohita says: Call me if you want to feel more good :)");
+       // Second popup 2 seconds after first popup closes
+       setTimeout(function() {
+           alert("CALLLLL MOMMY!");
+       }, 2000);
    }, 6000);
-   // Second popup (9 sec delay)
-   setTimeout(function() {
-       alert("CALLLLL MOMMY!");
-   }, 2000);
 </script>
    """, height=0)
 st.markdown('</div>', unsafe_allow_html=True)
