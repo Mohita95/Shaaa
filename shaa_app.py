@@ -1,11 +1,11 @@
 import streamlit as st
 st.set_page_config(page_title="The One & Only", page_icon=":)", layout="centered")
-# CSS to fix background and shift content up
+# CSS to color the whole page
 st.markdown(
    """
 <style>
-   /* Gradient pastel yellow background for full page */
-   .stApp {
+   /* Full-page background including top */
+   .stApp, .css-1d391kg, .css-1v3fvcr {
        background: linear-gradient(135deg, #fff9c4, #fff3e0, #fffde7);
        background-size: 400% 400%;
        animation: gradientBG 15s ease infinite;
@@ -17,9 +17,12 @@ st.markdown(
    }
    /* Shift main content up */
    .block-container {
-       padding-top: 20px;  /* smaller number = higher content */
+       padding-top: 20px;  /* smaller = higher up */
        padding-bottom: 20px;
    }
+   /* Hide Streamlit menu & footer (optional) */
+   #MainMenu {visibility: hidden;}
+   footer {visibility: hidden;}
    /* Title style */
    h1 {
        color: #ff69b4;
