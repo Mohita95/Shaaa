@@ -88,7 +88,7 @@ if st.button("Works For Greek Gods Only"):
    setTimeout(function() {
        alert("Mohita says: Call me if you want to feel more good :)");
    }, 6000);
-   // Second popup (2 sec delay)
+   // Second popup (9 sec delay)
    setTimeout(function() {
        alert("CALLLLL MOMMY!");
    }, 2000);
