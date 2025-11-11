@@ -72,6 +72,30 @@ footer {visibility: hidden;}
    50% { opacity:1; }
    100% { transform: translateY(-200vh) rotate(-45deg); opacity:0; }
 }
+/* Popup style */
+#popup {
+   display: none;
+   position: fixed;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: linear-gradient(90deg, #ffb6c1, #ffd1dc, #ffe4e1);
+   padding: 20px 40px;
+   border-radius: 15px;
+   font-family: 'Comic Sans MS', cursive, sans-serif;
+   font-size: 22px;
+   color: #ff1493;
+   text-align: center;
+   z-index: 20;
+   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+   animation: colorShift 5s ease infinite alternate;
+}
+/* Gradient color shift for popup */
+@keyframes colorShift {
+   0% {background: linear-gradient(90deg, #ffb6c1, #ffd1dc, #ffe4e1);}
+   50% {background: linear-gradient(90deg, #ffe4e1, #fff0f5, #ffb6c1);}
+   100% {background: linear-gradient(90deg, #ffd1dc, #ffe4e1, #ffb6c1);}
+}
 </style>
 <!-- Floating hearts at different horizontal positions -->
 <div class="heart" style="left:5%; animation-delay:0s;"></div>
@@ -81,6 +105,8 @@ footer {visibility: hidden;}
 <div class="heart" style="left:65%; animation-delay:3s;"></div>
 <div class="heart" style="left:80%; animation-delay:5s;"></div>
 <div class="heart" style="left:90%; animation-delay:0.5s;"></div>
+<!-- Popup div -->
+<div id="popup">Call me if this made you smile :)</div>
 """, unsafe_allow_html=True)
 # Page content
 st.markdown('<div class="centered-content">', unsafe_allow_html=True)
@@ -89,12 +115,12 @@ st.write("Now click the button below thinking about all your Powers!!!")
 if st.button("Works For Greek Gods Only"):
    st.image("https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif", use_container_width=True)
    st.markdown("<h2>Not letting go of machi until you feel better :)</h2>", unsafe_allow_html=True)
-   # JavaScript popup after 6 seconds
+   # Show popup after 6 seconds
    components.html("""
 <script>
-       setTimeout(function() {
-           alert("Call me if this made you smile :)");
-       }, 6000);
+   setTimeout(function() {
+       document.getElementById("popup").style.display = "block";
+   }, 6000);
 </script>
    """, height=0)
 st.markdown('</div>', unsafe_allow_html=True)
