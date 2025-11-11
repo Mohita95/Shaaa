@@ -1,6 +1,5 @@
 import streamlit as st
 st.set_page_config(page_title="The One & Only", page_icon=":)", layout="centered")
-
 st.markdown(
    """
 <style>
@@ -23,17 +22,29 @@ st.markdown(
    }
    /* Remove extra Streamlit padding */
    .css-1d391kg, .css-1v3fvcr {margin:0; padding:0; height:100%;}
-   /* Block container */
-   .block-container {padding-top:20px !important; z-index:2; position:relative;}
+   /* Block container: make content appear above hearts */
+   .block-container {
+       padding-top: 20px !important;
+       z-index: 10 !important;  /* CONTENT ABOVE HEARTS */
+       position: relative !important;
+   }
    /* Hide Streamlit menu/footer */
    #MainMenu {visibility:hidden;}
    footer {visibility:hidden;}
    /* Title and message */
-   h1 {color:#ff69b4; text-align:center; font-family:'Comic Sans MS', cursive, sans-serif; position:relative; z-index:2;}
-   h2 {color:#ff1493; text-align:center; font-family:'Arial', sans-serif; position:relative; z-index:2;}
+   h1 {color:#ff69b4; text-align:center; font-family:'Comic Sans MS', cursive, sans-serif; position:relative; z-index:10;}
+   h2 {color:#ff1493; text-align:center; font-family:'Arial', sans-serif; position:relative; z-index:10;}
    /* Button style */
-   .stButton>button {background-color:#ffb6c1; color:white; font-size:20px; border-radius:10px; padding:10px 24px; z-index:2; position:relative;}
-   /* Floating upright hearts */
+   .stButton>button {
+       background-color:#ffb6c1;
+       color:white;
+       font-size:20px;
+       border-radius:10px;
+       padding:10px 24px;
+       z-index:10;
+       position:relative;
+   }
+   /* Floating upright hearts in background */
    .heart {
        position: absolute;
        width: 15px;
@@ -41,8 +52,8 @@ st.markdown(
        background: #ff6f91;
        opacity: 0.7;
        border-radius: 50% 50% 0 0;
-       transform: rotate(0deg);  /* upright */
        animation: floatUp 6s linear infinite;
+       z-index: 1;  /* HEARTS BELOW CONTENT */
    }
    .heart:before,
    .heart:after {
@@ -71,6 +82,7 @@ st.markdown(
    """,
    unsafe_allow_html=True
 )
+# Page content
 st.title("This is for My Forever Baby, Shaa<3  \nSmile karo pehle, Koi baat nahi Fake bhi chalegi :) \n")
 st.write("Now click the button below thinking about all your Powers!!!")
 if st.button("Works For Greek Gods Only"):
