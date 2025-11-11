@@ -4,7 +4,6 @@ st.set_page_config(
    page_icon="??",
    layout="centered"
 )
-# Full HTML + CSS for background and hearts
 st.markdown("""
 <style>
 /* Full-page gradient background */
@@ -50,10 +49,10 @@ footer {visibility: hidden;}
    height: 20px;
    background: #ff6f91;
    transform: rotate(-45deg);
-   top: 100vh; /* start below visible page */
+   top: 100vh; /* start below the page */
    z-index: 1;  /* behind content */
    opacity: 0.7;
-   animation: floatUp 8s linear forwards; /* forwards to keep it gone after floating */
+   animation: floatUp 8s linear infinite; /* continuous looping */
 }
 .heart:before,
 .heart:after {
@@ -66,7 +65,7 @@ footer {visibility: hidden;}
 }
 .heart:before { top: -10px; left: 0; }
 .heart:after { top: 0; left: 10px; }
-/* Float animation from bottom to above top */
+/* Continuous float animation */
 @keyframes floatUp {
    0% { transform: translateY(0) rotate(-45deg); opacity:0.7; }
    50% { opacity:1; }
@@ -74,12 +73,13 @@ footer {visibility: hidden;}
 }
 </style>
 <!-- Floating hearts at different horizontal positions -->
-<div class="heart" style="left:10%; animation-delay:0s;"></div>
-<div class="heart" style="left:25%; animation-delay:1s;"></div>
-<div class="heart" style="left:40%; animation-delay:2s;"></div>
-<div class="heart" style="left:60%; animation-delay:3s;"></div>
-<div class="heart" style="left:75%; animation-delay:4s;"></div>
-<div class="heart" style="left:90%; animation-delay:5s;"></div>
+<div class="heart" style="left:5%; animation-delay:0s;"></div>
+<div class="heart" style="left:15%; animation-delay:2s;"></div>
+<div class="heart" style="left:30%; animation-delay:4s;"></div>
+<div class="heart" style="left:50%; animation-delay:1s;"></div>
+<div class="heart" style="left:65%; animation-delay:3s;"></div>
+<div class="heart" style="left:80%; animation-delay:5s;"></div>
+<div class="heart" style="left:90%; animation-delay:0.5s;"></div>
 """, unsafe_allow_html=True)
 # Page content
 st.markdown('<div class="centered-content">', unsafe_allow_html=True)
