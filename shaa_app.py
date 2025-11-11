@@ -1,7 +1,7 @@
 import streamlit as st
 st.set_page_config(
    page_title="The One & Only Shaa",
-   page_icon="??",
+   page_icon="",
    layout="centered"
 )
 st.markdown("""
@@ -83,9 +83,9 @@ footer {visibility: hidden;}
 """, unsafe_allow_html=True)
 # Page content
 st.markdown('<div class="centered-content">', unsafe_allow_html=True)
-st.title("This is for My Forever Baby, Shaa <3\nSmile karo pehle, Koi baat nahi Fake bhi chalegi :)")
+st.title("This is for My Forever Baby, Shaa<3\nSmile karo pehle, Koi baat nahi Fake bhi chalegi :)")
 st.write("Now click the button below thinking about all your Powers!!!")
 if st.button("Works For Greek Gods Only"):
    st.image("https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif", use_container_width=True)
-   st.markdown("<h2>Mera Shaa, Tu jaldi theek hogaaaa! :) ??</h2>", unsafe_allow_html=True)
+   st.markdown("<h2>Mera Shaa, Tu jaldi theek hogaaaa! :) </h2>", unsafe_allow_html=True)
 st.markdown('</div>', unsafe_allow_html=True)
