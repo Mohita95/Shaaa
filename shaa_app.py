@@ -50,10 +50,10 @@ footer {visibility: hidden;}
    height: 20px;
    background: #ff6f91;
    transform: rotate(-45deg);
-   top: 90%;
+   top: 100vh; /* start below visible page */
    z-index: 1;  /* behind content */
    opacity: 0.7;
-   animation: floatUp 6s linear infinite;
+   animation: floatUp 8s linear forwards; /* forwards to keep it gone after floating */
 }
 .heart:before,
 .heart:after {
@@ -66,10 +66,11 @@ footer {visibility: hidden;}
 }
 .heart:before { top: -10px; left: 0; }
 .heart:after { top: 0; left: 10px; }
+/* Float animation from bottom to above top */
 @keyframes floatUp {
-   0% { transform: translateY(100vh) rotate(-45deg); opacity:0.7; }
+   0% { transform: translateY(0) rotate(-45deg); opacity:0.7; }
    50% { opacity:1; }
-   100% { transform: translateY(-20vh) rotate(-45deg); opacity:0; }
+   100% { transform: translateY(-200vh) rotate(-45deg); opacity:0; }
 }
 </style>
 <!-- Floating hearts at different horizontal positions -->
@@ -88,4 +89,3 @@ if st.button("Works For Greek Gods Only"):
    st.image("https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif", use_container_width=True)
    st.markdown("<h2>Mera Shaa, Tu jaldi theek hogaaaa! :) ??</h2>", unsafe_allow_html=True)
 st.markdown('</div>', unsafe_allow_html=True)
- 
