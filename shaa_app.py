@@ -1,5 +1,5 @@
 import streamlit as st
-st.set_page_config(page_title="For Shaa", page_icon=":)", layout="centered")
+st.set_page_config(page_title="The One & Only", page_icon=":)", layout="centered")
 st.title("This is for My Forever Baby, Shaa<3  \nSmile & Click\n")
 st.write("Click the button below thinking about all your Powers!!!")
 if st.button("Works For Greek Gods Only"):
