@@ -1,7 +1,8 @@
 import streamlit as st
+import streamlit.components.v1 as components
 st.set_page_config(
    page_title="The One & Only Shaa",
-   page_icon="",
+   page_icon="??",
    layout="centered"
 )
 st.markdown("""
@@ -88,4 +89,12 @@ st.write("Now click the button below thinking about all your Powers!!!")
 if st.button("Works For Greek Gods Only"):
    st.image("https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif", use_container_width=True)
    st.markdown("<h2>Not letting go of machi until you feel better :)</h2>", unsafe_allow_html=True)
+   # JavaScript popup after 6 seconds
+   components.html("""
+<script>
+       setTimeout(function() {
+           alert("Call me if this made you smile :)");
+       }, 6000);
+</script>
+   """, height=0)
 st.markdown('</div>', unsafe_allow_html=True)
