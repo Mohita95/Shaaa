@@ -1,6 +1,6 @@
 import streamlit as st
 st.set_page_config(page_title="The One & Only", page_icon=":)", layout="centered")
-)
+
 st.markdown(
    """
 <style>
@@ -71,7 +71,6 @@ st.markdown(
    """,
    unsafe_allow_html=True
 )
- 
 st.title("This is for My Forever Baby, Shaa<3  \nSmile karo pehle, Koi baat nahi Fake bhi chalegi :) \n")
 st.write("Now click the button below thinking about all your Powers!!!")
 if st.button("Works For Greek Gods Only"):
