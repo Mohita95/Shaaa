@@ -1,6 +1,6 @@
 import streamlit as st
 st.set_page_config(page_title="For Shaa", page_icon=":)", layout="centered")
-st.title("Smile & Click — this is for My Forever Baby, Shaa <3")
+st.title("Smile & Click — This is for My Forever Baby, Shaa <3")
 st.write("Click the button below thinking about all your Powers!!!")
 if st.button("Works For Greek Gods Only"):
    st.image("https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif", use_container_width=True)
