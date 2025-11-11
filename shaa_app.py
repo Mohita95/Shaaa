@@ -89,10 +89,10 @@ if st.button("Works For Greek Gods Only"):
 <script>
    // First popup after 6 seconds
    setTimeout(function() {
-       alert("Mohita says: Call me if you want to feel more good :)");
+       alert("Still Not feeling any better, hmmmm!");
        // Second popup 2 seconds after first popup closes
        setTimeout(function() {
-           alert("CALLLLL MOMMY!");
+           alert("Mohita says: HOW ABOUT CALLING YOUR MOMMY?!:)");
        }, 2000);
    }, 6000);
 </script>
